@@ -1,0 +1,9470 @@
+csrfmiddlewaretoken: lwv9ftOIlVhwqQwFQLu4NgmPzQFhOXgo,
+simuParam: {
+  "simuCmd": "cloudpssrun",
+  "_isSet": false,
+  "start": 0,
+  "end": 1,
+  "step": 0.000001,
+  "switch": "0",
+  "breakPoint": [
+    ""
+  ],
+  "converge_criteria": 0.000001,
+  "environment_temperature": 10,
+  "media_heat_capacity": 4182,
+  "media_density": 958.4,
+  "media_kinematical_viscosity": 9.34e-7,
+  "err": "1e-5",
+  "maxiter": "100",
+  "Sbase": "100",
+  "frequency": "60",
+  "taskID": "",
+  "globalParam": {
+    "defaultApp": {
+      "symbol": {
+        "$": {
+          "$StartMPPT2_time": "0.3",
+          "$StartMPPT1_time": "0.2",
+          "$PrefChange_time": "0.5",
+          "$LoadChange_time": "0.7",
+          "$initial_type": "0",
+          "$ramping_time": "0",
+          "$max_initial_time": "0",
+          "$save_snapshot": "0",
+          "$save_snapshot_time": "0",
+          "$snapshot_number": "0",
+          "$load_snapshot": "0",
+          "$load_snapshot_time": "0"
+        },
+        "$desc": {
+          "$StartMPPT2_time": {
+            "desc": "",
+            "tag": "",
+            "value": "0.3",
+            "key": "$StartMPPT2_time"
+          },
+          "$StartMPPT1_time": {
+            "desc": "",
+            "tag": "",
+            "value": "0.2",
+            "key": "$StartMPPT1_time"
+          },
+          "$PrefChange_time": {
+            "desc": "",
+            "tag": "",
+            "value": "0.5",
+            "key": "$PrefChange_time"
+          },
+          "$LoadChange_time": {
+            "desc": "",
+            "tag": "",
+            "value": "0.7",
+            "key": "$LoadChange_time"
+          }
+        }
+      },
+      "paramchange": 1
+    }
+  },
+  "noLabel": 1,
+  "clearSystemLog": 1,
+  "pfUseBusVoltageAsInit": true,
+  "pfUseBusAngleAsInit": true,
+  "pfUseVoltageLimit": true,
+  "pfUseReactivePowerLimit": true,
+  "pfMaxIteration": 50,
+  "pfAdditionalParams": "",
+  "pfSkipPF": false
+}
+pssEle: {
+  "ThreePhaseHBridgeModule-1": {
+    "param": {
+      "Name": "",
+      "RIon": "0.005",
+      "RIoff": "100000000",
+      "RDon": "0.005",
+      "RDoff": "100000000",
+      "C": "0.001",
+      "V0": "0.12",
+      "VT": "",
+      "It": "",
+      "Id": ""
+    },
+    "classname": "_ThreePhaseHBridgeModule",
+    "name": "三相H桥模块",
+    "type": 3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "AC",
+        "dimx": "3",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC+",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC-",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "GS_3H",
+        "cond": "true",
+        "desc": "GS",
+        "dimx": "6",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "KB",
+        "cond": "true",
+        "desc": "KB",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 19,
+    "id": 0,
+    "sym": "ThreePhaseHBridgeModule",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-196": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ia1"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newLineCluster-29": {
+    "param": {
+      "Name": ""
+    },
+    "id": 0,
+    "sym": "newLineCluster",
+    "classname": "LineCluster",
+    "name": "分线/集线器",
+    "type": 3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin 1",
+        "dimx": "3",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin C",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-142": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.005",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-143": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.005",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-144": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.005",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-197": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ib1"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-198": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ic1"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newParkTransform-54": {
+    "param": {
+      "Name": "",
+      "Direction": "1",
+      "Alignment": "1"
+    },
+    "id": 0,
+    "sym": "newParkTransform",
+    "classname": "_newParkTransform",
+    "name": "Park变换器",
+    "type": -3007,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "Theta",
+        "cond": "true",
+        "desc": "Theta",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "6": {
+        "node": -1,
+        "label": "#Main.#Ia1",
+        "cond": "Direction==1",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "#Main.#Ib1",
+        "cond": "Direction==1",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "8": {
+        "node": -1,
+        "label": "#Main.#Ic1",
+        "cond": "Direction==1",
+        "desc": "C",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "9": {
+        "node": -1,
+        "label": "Id1",
+        "cond": "Direction==1",
+        "desc": "d",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "10": {
+        "node": -1,
+        "label": "Iq1",
+        "cond": "Direction==1",
+        "desc": "q",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPLL-12": {
+    "param": {
+      "Name": "",
+      "P": "50",
+      "I": "900",
+      "Voltage": "0.001",
+      "F": "50",
+      "Offset": "0",
+      "T": "0.05",
+      "UL": "1.2",
+      "LL": "0.8",
+      "Fo": ""
+    },
+    "classname": "_newPLL",
+    "name": "锁相环",
+    "type": -3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Va",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Vb",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Vc",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "Theta",
+        "cond": "true",
+        "desc": "Theta",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPLL",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSinGen-3": {
+    "param": {
+      "Name": "",
+      "F": "50",
+      "Mag": "1",
+      "Phase": "0",
+      "Type": "0",
+      "Offset": "0",
+      "Dim": "1"
+    },
+    "id": 0,
+    "sym": "newSinGen",
+    "classname": "_newSinGen",
+    "name": "正弦发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "Dim==1",
+        "desc": "Output A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "Dim==1",
+        "desc": "Output B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "Dim==1",
+        "desc": "Output C",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-252": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "Id1",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-253": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "Iq1",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newParkTransform-55": {
+    "param": {
+      "Name": "",
+      "Direction": "0",
+      "Alignment": "1"
+    },
+    "id": 0,
+    "sym": "newParkTransform",
+    "classname": "_newParkTransform",
+    "name": "Park变换器",
+    "type": -3007,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "Theta",
+        "cond": "true",
+        "desc": "Theta",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "Direction==0",
+        "desc": "d",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "Direction==0",
+        "desc": "q",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "Direction==0",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "",
+        "cond": "Direction==0",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "Direction==0",
+        "desc": "C",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newTriGen-53": {
+    "param": {
+      "Name": "",
+      "F": "10000",
+      "Max": "1",
+      "Min": "-1",
+      "Duty": "0.5",
+      "Phase": "0"
+    },
+    "id": 0,
+    "sym": "newTriGen",
+    "classname": "_newTriGen",
+    "name": "三角波发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "tri",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComparator-186": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "True": "1",
+      "False": "0"
+    },
+    "classname": "_newComparator",
+    "name": "比较器",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "tri",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newComparator",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComparator-187": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "True": "1",
+      "False": "0"
+    },
+    "classname": "_newComparator",
+    "name": "比较器",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "tri",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newComparator",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComparator-188": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "True": "1",
+      "False": "0"
+    },
+    "classname": "_newComparator",
+    "name": "比较器",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "tri",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newComparator",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "ChannelMerge-67": {
+    "id": 0,
+    "sym": "ChannelMerge",
+    "classname": "_ChannelMerge",
+    "name": "多路信号合并",
+    "type": -2,
+    "thutype": "NewPara",
+    "custom": "1",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "0",
+        "starty": "0",
+        "dec": ""
+      },
+      "1": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "1",
+        "starty": "0",
+        "dec": ""
+      },
+      "2": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "2",
+        "starty": "0",
+        "dec": ""
+      },
+      "3": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "3",
+        "starty": "0",
+        "dec": ""
+      },
+      "4": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "4",
+        "starty": "0",
+        "dec": ""
+      },
+      "5": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "5",
+        "starty": "0",
+        "dec": ""
+      },
+      "6": {
+        "node": -1,
+        "id": 0,
+        "label": "GS_3H",
+        "isVisible": 1,
+        "align": "1",
+        "dimx": "6",
+        "dimy": "1",
+        "dec": ""
+      }
+    },
+    "param": {},
+    "msrin": "",
+    "msrout": "",
+    "msroutput": "",
+    "ctrlable": 0,
+    "ctrlin": "",
+    "ctrlout": "",
+    "ctrlby": [],
+    "paramProxy": {},
+    "_mid": "2",
+    "in_pin_length": 6,
+    "out_pin_length": 1,
+    "pin_length": 7,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-304": {
+    "param": {
+      "Name": "",
+      "Value": "1"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "KB",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGND-33": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "GND",
+    "name": "接地点",
+    "type": 3001,
+    "thutype": "SFA",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "GND",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 1,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "id": 0,
+    "sym": "newGND",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-79": {
+    "param": {
+      "Name": "",
+      "Gain": "100",
+      "Tc": "0.0001",
+      "Lim": "0",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-80": {
+    "param": {
+      "Name": "",
+      "Gain": "100",
+      "Tc": "0.0001",
+      "Lim": "0",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "HalfBridgeModule-1": {
+    "param": {
+      "Name": "",
+      "RIon": "0.005",
+      "RIoff": "100000000",
+      "RDon": "0.005",
+      "RDoff": "100000000",
+      "C": "0.001",
+      "V0": "0.38",
+      "VT": "",
+      "It": "",
+      "Id": ""
+    },
+    "classname": "_HalfBridgeModule",
+    "name": "半桥模块",
+    "type": 3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "M",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC-",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC+",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "GS_PV1",
+        "cond": "true",
+        "desc": "GS",
+        "dimx": "2",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "KB",
+        "cond": "true",
+        "desc": "KB",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 18,
+    "id": 0,
+    "sym": "HalfBridgeModule",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-146": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.01",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGND-35": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "GND",
+    "name": "接地点",
+    "type": 3001,
+    "thutype": "SFA",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "GND",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 1,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "id": 0,
+    "sym": "newGND",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newVoltageMeter-187": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vpv1"
+    },
+    "classname": "_NewVoltageMeter",
+    "name": "电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCapacitorRouterWithInitValue-3": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "C": "10",
+      "init_value": "0.23",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newCapacitorRouterWithInitValue",
+    "name": "电容(初值)",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newCapacitorRouterWithInitValue",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "ChannelMerge-68": {
+    "id": 0,
+    "sym": "ChannelMerge",
+    "classname": "_ChannelMerge",
+    "name": "多路信号合并",
+    "type": -2,
+    "thutype": "NewPara",
+    "custom": "1",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "0",
+        "starty": "0",
+        "dec": ""
+      },
+      "1": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "1",
+        "starty": "0",
+        "dec": ""
+      },
+      "2": {
+        "node": -1,
+        "id": 0,
+        "label": "GS_PV2",
+        "isVisible": 1,
+        "align": "1",
+        "dimx": "2",
+        "dimy": "1",
+        "dec": ""
+      }
+    },
+    "param": {},
+    "msrin": "",
+    "msrout": "",
+    "msroutput": "",
+    "ctrlable": 0,
+    "ctrlin": "",
+    "ctrlout": "",
+    "ctrlby": [],
+    "paramProxy": {},
+    "_mid": "2",
+    "in_pin_length": 2,
+    "out_pin_length": 1,
+    "pin_length": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-309": {
+    "param": {
+      "Name": "",
+      "Value": "0"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-82": {
+    "param": {
+      "Name": "",
+      "Gain": "10",
+      "Tc": "0.001",
+      "Lim": "1",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1",
+      "Min": "0",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-255": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "Vpv2_ref",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "#Main.#Vpv2",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComparator-190": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "True": "1",
+      "False": "0"
+    },
+    "classname": "_newComparator",
+    "name": "比较器",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newComparator",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "NC-4": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "ElectricalLable",
+    "name": "控制悬空端",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "NC",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "NC",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-246": {
+    "param": {
+      "Name": "",
+      "G": "-1"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-47": {
+    "param": {
+      "Name": "",
+      "Control": "0",
+      "Rate": "10000"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newTriGen-55": {
+    "param": {
+      "Name": "",
+      "F": "10000",
+      "Max": "1",
+      "Min": "0",
+      "Duty": "0.5",
+      "Phase": "0"
+    },
+    "id": 0,
+    "sym": "newTriGen",
+    "classname": "_newTriGen",
+    "name": "三角波发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPVSource-10": {
+    "param": {
+      "Name": "",
+      "Ncs": "8",
+      "Ncp": "10",
+      "Irra": "1000",
+      "T": "25",
+      "Uocr": "37",
+      "Iscr": "8.4",
+      "Umr": "29.5",
+      "Imr": "7.8",
+      "alpha": "0.0005",
+      "beta": "0.005",
+      "gamma": "0.00288",
+      "Pout": "",
+      "Vout": "",
+      "Iout": ""
+    },
+    "classname": "_newPVSource",
+    "name": "光伏电池单元",
+    "type": 3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "T",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "G",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newPVSource",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-311": {
+    "param": {
+      "Name": "",
+      "Value": "25"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-312": {
+    "param": {
+      "Name": "",
+      "Value": "1000"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-168": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.01",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-199": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ipv_out1"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-200": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ipv1"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-50": {
+    "param": {
+      "Name": "",
+      "Control": "1",
+      "Rate": "100"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Vpv2",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Sample2",
+        "cond": "Control==1",
+        "desc": "Pulse",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-51": {
+    "param": {
+      "Name": "",
+      "Control": "1",
+      "Rate": "100"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Sample2",
+        "cond": "Control==1",
+        "desc": "Pulse",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newDelay-24": {
+    "param": {
+      "Name": "",
+      "Td": "0.0025",
+      "Sp": "100",
+      "init_value": "0"
+    },
+    "id": 0,
+    "sym": "newDelay",
+    "classname": "_newDelay",
+    "name": "延时环节",
+    "type": -3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-259": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-260": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newDivide-72": {
+    "param": {
+      "Name": ""
+    },
+    "id": 0,
+    "sym": "newDivide",
+    "classname": "_newDivide",
+    "name": "除法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "N",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-248": {
+    "param": {
+      "Name": "",
+      "G": "0.001"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSelector-101": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "Threshold": "0.5"
+    },
+    "id": 0,
+    "sym": "newSelector",
+    "classname": "_newSelector",
+    "name": "选择器",
+    "type": -3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "StartMPPT2",
+        "cond": "true",
+        "desc": "Ctrl",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-315": {
+    "param": {
+      "Name": "",
+      "Value": "0"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-261": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSelector-102": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "Threshold": "0.5"
+    },
+    "id": 0,
+    "sym": "newSelector",
+    "classname": "_newSelector",
+    "name": "选择器",
+    "type": -3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "StartMPPT2",
+        "cond": "true",
+        "desc": "Ctrl",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "Vpv2_ref",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-316": {
+    "param": {
+      "Name": "",
+      "Value": "0.23"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newDelay-25": {
+    "param": {
+      "Name": "",
+      "Td": "0.0025",
+      "Sp": "100",
+      "init_value": "0"
+    },
+    "id": 0,
+    "sym": "newDelay",
+    "classname": "_newDelay",
+    "name": "延时环节",
+    "type": -3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newStepGen-42": {
+    "param": {
+      "Name": "",
+      "V0": "0",
+      "V1": "1",
+      "Time": "0.3"
+    },
+    "id": 0,
+    "sym": "newStepGen",
+    "classname": "_newStepGen",
+    "name": "阶跃发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "StartMPPT2",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newMultiply-115": {
+    "param": {
+      "Name": ""
+    },
+    "id": 0,
+    "sym": "newMultiply",
+    "classname": "_newMultiply",
+    "name": "乘法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Ipv2",
+        "cond": "true",
+        "desc": "Input 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "#Main.#Vpv2",
+        "cond": "true",
+        "desc": "Input 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSgn-3": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "_newSgn",
+    "name": "符号函数",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newSgn",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-59": {
+    "param": {
+      "Name": "",
+      "Control": "1",
+      "Rate": "100"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Sample2",
+        "cond": "Control==1",
+        "desc": "Pulse",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newLimiter-128": {
+    "param": {
+      "Name": "",
+      "Limtype": "0",
+      "UL": "0.005",
+      "LL": "-0.005",
+      "DUL": "",
+      "DLL": ""
+    },
+    "classname": "_newLimiter",
+    "name": "限幅器",
+    "type": -3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newLimiter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newLoopNode-15": {
+    "param": {
+      "Name": "",
+      "Init": "0"
+    },
+    "classname": "_newLoopNode",
+    "name": "代数环解环点",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newLoopNode",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPulseGen-15": {
+    "param": {
+      "Name": "",
+      "F": "100",
+      "Height": "1",
+      "T0": "0"
+    },
+    "id": 0,
+    "sym": "newPulseGen",
+    "classname": "_newPulseGen",
+    "name": "脉冲发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "Sample2",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "HalfBridgeModule-2": {
+    "param": {
+      "Name": "",
+      "RIon": "0.005",
+      "RIoff": "100000000",
+      "RDon": "0.005",
+      "RDoff": "100000000",
+      "C": "0.001",
+      "V0": "0.9",
+      "VT": "",
+      "It": "",
+      "Id": ""
+    },
+    "classname": "_HalfBridgeModule",
+    "name": "半桥模块",
+    "type": 3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "M",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC-",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC+",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "GS_BAT",
+        "cond": "true",
+        "desc": "GS",
+        "dimx": "2",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "KB",
+        "cond": "true",
+        "desc": "KB",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 18,
+    "id": 0,
+    "sym": "HalfBridgeModule",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newVoltageMeter-189": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vbat"
+    },
+    "classname": "_NewVoltageMeter",
+    "name": "电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "ChannelMerge-69": {
+    "id": 0,
+    "sym": "ChannelMerge",
+    "classname": "_ChannelMerge",
+    "name": "多路信号合并",
+    "type": -2,
+    "thutype": "NewPara",
+    "custom": "1",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "0",
+        "starty": "0",
+        "dec": ""
+      },
+      "1": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "1",
+        "starty": "0",
+        "dec": ""
+      },
+      "2": {
+        "node": -1,
+        "id": 0,
+        "label": "GS_BAT",
+        "isVisible": 1,
+        "align": "1",
+        "dimx": "2",
+        "dimy": "1",
+        "dec": ""
+      }
+    },
+    "param": {},
+    "msrin": "",
+    "msrout": "",
+    "msroutput": "",
+    "ctrlable": 0,
+    "ctrlin": "",
+    "ctrlout": "",
+    "ctrlby": [],
+    "paramProxy": {},
+    "_mid": "2",
+    "in_pin_length": 2,
+    "out_pin_length": 1,
+    "pin_length": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-83": {
+    "param": {
+      "Name": "",
+      "Gain": "10",
+      "Tc": "0.001",
+      "Lim": "1",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1",
+      "Min": "0",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-265": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComparator-191": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "True": "1",
+      "False": "0"
+    },
+    "classname": "_newComparator",
+    "name": "比较器",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newComparator",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-250": {
+    "param": {
+      "Name": "",
+      "G": "1"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-61": {
+    "param": {
+      "Name": "",
+      "Control": "0",
+      "Rate": "10000"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newTriGen-56": {
+    "param": {
+      "Name": "",
+      "F": "10000",
+      "Max": "1",
+      "Min": "0",
+      "Duty": "0.5",
+      "Phase": "0"
+    },
+    "id": 0,
+    "sym": "newTriGen",
+    "classname": "_newTriGen",
+    "name": "三角波发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-147": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.01",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGND-36": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "GND",
+    "name": "接地点",
+    "type": 3001,
+    "thutype": "SFA",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "GND",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 1,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "id": 0,
+    "sym": "newGND",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCapacitorRouterWithInitValue-4": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "C": "1000",
+      "init_value": "0.38",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newCapacitorRouterWithInitValue",
+    "name": "电容(初值)",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newCapacitorRouterWithInitValue",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-203": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ibat_out"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-204": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ibat"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newRealPole-2": {
+    "param": {
+      "Name": "",
+      "Gain": "1",
+      "Tc": "1e-4",
+      "InitType": "0",
+      "Init": "0",
+      "Lim": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newRealPole",
+    "name": "一阶惯性环节",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Ibat_out",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newRealPole",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newStorageBattery-10": {
+    "param": {
+      "Name": "",
+      "Qfull": "9600",
+      "Efull": "931.2",
+      "Eexp": "864.3",
+      "Qexp": "471.65",
+      "Enorm": "800",
+      "Qnorm": "8681.7",
+      "Inorm": "4173.9",
+      "R": "0.000833",
+      "initSoc": "0.8",
+      "V": "",
+      "I": "",
+      "P": "",
+      "soc": ""
+    },
+    "classname": "_newStorageBattery",
+    "name": "铅酸蓄电池",
+    "type": 3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 7,
+    "id": 0,
+    "sym": "newStorageBattery",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newVoltageMeter-191": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vbat_out"
+    },
+    "classname": "_NewVoltageMeter",
+    "name": "电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newMultiply-117": {
+    "param": {
+      "Name": ""
+    },
+    "id": 0,
+    "sym": "newMultiply",
+    "classname": "_newMultiply",
+    "name": "乘法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Ibat_out",
+        "cond": "true",
+        "desc": "Input 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "#Main.#Vbat_out",
+        "cond": "true",
+        "desc": "Input 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newRealPole-3": {
+    "param": {
+      "Name": "",
+      "Gain": "1",
+      "Tc": "1e-4",
+      "InitType": "0",
+      "Init": "0",
+      "Lim": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newRealPole",
+    "name": "一阶惯性环节",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Pbat",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newRealPole",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-267": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-85": {
+    "param": {
+      "Name": "",
+      "Gain": "10",
+      "Tc": "0.001",
+      "Lim": "1",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1",
+      "Min": "-1",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newBranchVoltageMeter-46": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Va1"
+    },
+    "classname": "_NewBranchVoltageMeter",
+    "name": "支路电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newBranchVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newBranchVoltageMeter-47": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vb1"
+    },
+    "classname": "_NewBranchVoltageMeter",
+    "name": "支路电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newBranchVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newBranchVoltageMeter-48": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vc1"
+    },
+    "classname": "_NewBranchVoltageMeter",
+    "name": "支路电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newBranchVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newParkTransform-56": {
+    "param": {
+      "Name": "",
+      "Direction": "1",
+      "Alignment": "1"
+    },
+    "id": 0,
+    "sym": "newParkTransform",
+    "classname": "_newParkTransform",
+    "name": "Park变换器",
+    "type": -3007,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "Theta",
+        "cond": "true",
+        "desc": "Theta",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "6": {
+        "node": -1,
+        "label": "#Main.#Va1",
+        "cond": "Direction==1",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "#Main.#Vb1",
+        "cond": "Direction==1",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "8": {
+        "node": -1,
+        "label": "#Main.#Vc1",
+        "cond": "Direction==1",
+        "desc": "C",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "9": {
+        "node": -1,
+        "label": "Vd1",
+        "cond": "Direction==1",
+        "desc": "d",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "10": {
+        "node": -1,
+        "label": "Vq1",
+        "cond": "Direction==1",
+        "desc": "q",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-268": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "Vd1",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-325": {
+    "param": {
+      "Name": "",
+      "Value": "0.11"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-269": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "Vq1",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-326": {
+    "param": {
+      "Name": "",
+      "Value": "0"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-86": {
+    "param": {
+      "Name": "",
+      "Gain": "0.1",
+      "Tc": "0.001",
+      "Lim": "0",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-87": {
+    "param": {
+      "Name": "",
+      "Gain": "0.1",
+      "Tc": "0.001",
+      "Lim": "0",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCapacitorRouterWithInitValue-6": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "C": "5",
+      "init_value": "0",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newCapacitorRouterWithInitValue",
+    "name": "电容(初值)",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newCapacitorRouterWithInitValue",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCapacitorRouterWithInitValue-7": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "C": "5",
+      "init_value": "0",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newCapacitorRouterWithInitValue",
+    "name": "电容(初值)",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newCapacitorRouterWithInitValue",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCapacitorRouterWithInitValue-8": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "C": "5",
+      "init_value": "0",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newCapacitorRouterWithInitValue",
+    "name": "电容(初值)",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newCapacitorRouterWithInitValue",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "NSSTsModule-1": {
+    "param": {
+      "Name": "",
+      "N": "10",
+      "RIon": "0.005",
+      "RIoff": "100000000",
+      "RDon": "0.005",
+      "RDoff": "100000000",
+      "C": "0.001",
+      "V0": "0.38",
+      "C1": "0.005",
+      "V1": "1.67",
+      "Tmva": "0.01",
+      "Vp": "1.67",
+      "Vs": "0.38",
+      "Fre": "10000",
+      "Xl": "0.7",
+      "Rloss": "0",
+      "Closs": "0",
+      "VT": "",
+      "It": "",
+      "Id": "",
+      "Vps": "",
+      "Ips": "",
+      "Vdc1": "#Main.#Vc"
+    },
+    "classname": "_NSSTsModule",
+    "name": "多模块SST",
+    "type": 3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC+",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC-",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "GS_SST",
+        "cond": "true",
+        "desc": "GS",
+        "dimx": "12*N",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "KB",
+        "cond": "true",
+        "desc": "KB",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 25,
+    "id": 0,
+    "sym": "NSSTsModule",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-149": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.05",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGND-39": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "GND",
+    "name": "接地点",
+    "type": 3001,
+    "thutype": "SFA",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "GND",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 1,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "id": 0,
+    "sym": "newGND",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGND-40": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "GND",
+    "name": "接地点",
+    "type": 3001,
+    "thutype": "SFA",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "GND",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 1,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "id": 0,
+    "sym": "newGND",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "FirePulseGenSST-1": {
+    "param": {
+      "N": "10",
+      "FreHB": "1000",
+      "FreDAB": "10000",
+      "DS": "0",
+      "US": "0"
+    },
+    "classname": "_FirePulseGenSST",
+    "name": "SST脉冲发生器",
+    "type": -3009,
+    "thutype": "NewPara",
+    "pin": {
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "DS==0",
+        "desc": "Duty",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "Um1",
+        "cond": "US==0",
+        "desc": "Uref",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "GS_SST",
+        "cond": "true",
+        "desc": "Gate",
+        "dimx": "12*N",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "FirePulseGenSST",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newVoltageMeter-192": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vdc"
+    },
+    "classname": "_NewVoltageMeter",
+    "name": "电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-205": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ia"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-66": {
+    "param": {
+      "Name": "",
+      "Control": "0",
+      "Rate": "10000"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "Um1",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newAFPMGen-5": {
+    "param": {
+      "Name": "",
+      "Func": "0"
+    },
+    "id": 0,
+    "sym": "newAFPMGen",
+    "classname": "_newAFPMGen",
+    "name": "可调正弦波发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Mag",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Freq",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Phase",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-330": {
+    "param": {
+      "Name": "",
+      "Value": "50"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-331": {
+    "param": {
+      "Name": "",
+      "Value": "0"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-273": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "#Main.#Ia",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-253": {
+    "param": {
+      "Name": "",
+      "G": "50"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-274": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-254": {
+    "param": {
+      "Name": "",
+      "G": "500"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComplexPole-7": {
+    "param": {
+      "Name": "",
+      "G": "0.31831927423205475",
+      "z": "0.01591596371160274",
+      "Fo": "50",
+      "Type": "2",
+      "Limit": "0",
+      "LimitS": "0",
+      "Up": "1",
+      "Do": "0",
+      "Ups": "1",
+      "Dos": "0"
+    },
+    "id": 0,
+    "sym": "newComplexPole",
+    "classname": "_newComplexPole",
+    "name": "二阶传递函数",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-275": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "#Main.#Vdc",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-255": {
+    "param": {
+      "Name": "",
+      "G": "0.22754491017964074"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-88": {
+    "param": {
+      "Name": "",
+      "Gain": "200",
+      "Tc": "0.0002",
+      "Lim": "1",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "0.499",
+      "Min": "-0.499",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-89": {
+    "param": {
+      "Name": "",
+      "Gain": "5",
+      "Tc": "0.005",
+      "Lim": "0",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "0.499",
+      "Min": "-0.499",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-276": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "#Main.#Vdc",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-332": {
+    "param": {
+      "Name": "",
+      "Value": "0.38"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-67": {
+    "param": {
+      "Name": "",
+      "Control": "0",
+      "Rate": "10000"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newACVoltageSource_1p-20": {
+    "param": {
+      "Name": "",
+      "Grnd": "1",
+      "Vm": "10",
+      "Func": "0",
+      "Ph": "0",
+      "f": "50",
+      "R": "0.01",
+      "Init": "0",
+      "Tramp": "0",
+      "Tconstant": "0.06",
+      "Fault": "0",
+      "Tfs": "0.2",
+      "Tfe": "0.4",
+      "Dr": "0.2",
+      "V": "",
+      "I": ""
+    },
+    "classname": "_newACVoltageSource_1p",
+    "name": "单相交流电压源",
+    "type": 3002,
+    "thutype": "NewPara",
+    "pin": {
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newACVoltageSource_1p",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComplexPole-8": {
+    "param": {
+      "Name": "",
+      "G": "2",
+      "z": "1",
+      "Fo": "100",
+      "Type": "2",
+      "Limit": "0",
+      "LimitS": "0",
+      "Up": "1",
+      "Do": "0",
+      "Ups": "1",
+      "Dos": "0"
+    },
+    "id": 0,
+    "sym": "newComplexPole",
+    "classname": "_newComplexPole",
+    "name": "二阶传递函数",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-277": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-256": {
+    "param": {
+      "Name": "",
+      "G": "1"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newRealPole-4": {
+    "param": {
+      "Name": "",
+      "Gain": "1",
+      "Tc": "5e-4",
+      "InitType": "1",
+      "Init": "0",
+      "Lim": "0",
+      "Max": "1000000000",
+      "Min": "-1000000000",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newRealPole",
+    "name": "一阶惯性环节",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newRealPole",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "ChannelDeMerge-1": {
+    "id": 0,
+    "sym": "ChannelDeMerge",
+    "classname": "_ChannelDeMerge",
+    "name": "多路信号分离",
+    "type": -2,
+    "thutype": "NewPara",
+    "custom": "1",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": "#Main.#Vc",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "10",
+        "dimy": "1",
+        "dec": ""
+      },
+      "1": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "1",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "0",
+        "starty": "0",
+        "dec": ""
+      }
+    },
+    "param": {},
+    "msrin": "",
+    "msrout": "",
+    "msroutput": "",
+    "ctrlable": 0,
+    "ctrlin": "",
+    "ctrlout": "",
+    "ctrlby": [],
+    "paramProxy": {},
+    "_mid": "2",
+    "in_pin_length": 1,
+    "out_pin_length": 1,
+    "pin_length": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newBranchVoltageMeter-49": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#vh"
+    },
+    "classname": "_NewBranchVoltageMeter",
+    "name": "支路电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newBranchVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-171": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.001",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-172": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.001",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "HalfBridgeModule-5": {
+    "param": {
+      "Name": "",
+      "RIon": "0.005",
+      "RIoff": "100000000",
+      "RDon": "0.005",
+      "RDoff": "100000000",
+      "C": "0.001",
+      "V0": "0.38",
+      "VT": "",
+      "It": "",
+      "Id": ""
+    },
+    "classname": "_HalfBridgeModule",
+    "name": "半桥模块",
+    "type": 3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "M",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC-",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "DC+",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "GS_PV2",
+        "cond": "true",
+        "desc": "GS",
+        "dimx": "2",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "4": {
+        "node": -1,
+        "label": "KB",
+        "cond": "true",
+        "desc": "KB",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 18,
+    "id": 0,
+    "sym": "HalfBridgeModule",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newInductor-150": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "L": "0.01",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newInductorRouter",
+    "name": "电感",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newInductor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGND-41": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "GND",
+    "name": "接地点",
+    "type": 3001,
+    "thutype": "SFA",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "GND",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 1,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "id": 0,
+    "sym": "newGND",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newVoltageMeter-193": {
+    "param": {
+      "Dim": "1",
+      "V": "#Main.#Vpv2"
+    },
+    "classname": "_NewVoltageMeter",
+    "name": "电压表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newVoltageMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCapacitorRouterWithInitValue-9": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "C": "10",
+      "init_value": "0.23",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newCapacitorRouterWithInitValue",
+    "name": "电容(初值)",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newCapacitorRouterWithInitValue",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPVSource-11": {
+    "param": {
+      "Name": "",
+      "Ncs": "8",
+      "Ncp": "10",
+      "Irra": "1000",
+      "T": "25",
+      "Uocr": "37",
+      "Iscr": "8.4",
+      "Umr": "29.5",
+      "Imr": "7.8",
+      "alpha": "0.0005",
+      "beta": "0.005",
+      "gamma": "0.00288",
+      "Pout": "",
+      "Vout": "",
+      "Iout": ""
+    },
+    "classname": "_newPVSource",
+    "name": "光伏电池单元",
+    "type": 3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "T",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "G",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newPVSource",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-333": {
+    "param": {
+      "Name": "",
+      "Value": "25"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-334": {
+    "param": {
+      "Name": "",
+      "Value": "1000"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-173": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.01",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-206": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ipv_out2"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-207": {
+    "param": {
+      "Dim": "1",
+      "I": "#Main.#Ipv2"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-174": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.001",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-175": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.001",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "ChannelMerge-71": {
+    "id": 0,
+    "sym": "ChannelMerge",
+    "classname": "_ChannelMerge",
+    "name": "多路信号合并",
+    "type": -2,
+    "thutype": "NewPara",
+    "custom": "1",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "0",
+        "starty": "0",
+        "dec": ""
+      },
+      "1": {
+        "node": -1,
+        "id": 0,
+        "label": "",
+        "isVisible": 1,
+        "align": "0",
+        "dimx": "1",
+        "dimy": "1",
+        "startx": "1",
+        "starty": "0",
+        "dec": ""
+      },
+      "2": {
+        "node": -1,
+        "id": 0,
+        "label": "GS_PV1",
+        "isVisible": 1,
+        "align": "1",
+        "dimx": "2",
+        "dimy": "1",
+        "dec": ""
+      }
+    },
+    "param": {},
+    "msrin": "",
+    "msrout": "",
+    "msroutput": "",
+    "ctrlable": 0,
+    "ctrlin": "",
+    "ctrlout": "",
+    "ctrlby": [],
+    "paramProxy": {},
+    "_mid": "2",
+    "in_pin_length": 2,
+    "out_pin_length": 1,
+    "pin_length": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-335": {
+    "param": {
+      "Name": "",
+      "Value": "0"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPICtrl-90": {
+    "param": {
+      "Name": "",
+      "Gain": "10",
+      "Tc": "0.001",
+      "Lim": "1",
+      "Init": "0",
+      "Reset": "0",
+      "Max": "1",
+      "Min": "0",
+      "DMax": "",
+      "DMin": ""
+    },
+    "classname": "_newPICtrl",
+    "name": "PI控制器",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newPICtrl",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-278": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "Vpv1_ref",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "#Main.#Vpv1",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newComparator-193": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "True": "1",
+      "False": "0"
+    },
+    "classname": "_newComparator",
+    "name": "比较器",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newComparator",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "NC-6": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "ElectricalLable",
+    "name": "控制悬空端",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "NC",
+        "dimx": "0",
+        "dimy": "0",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "NC",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-257": {
+    "param": {
+      "Name": "",
+      "G": "-1"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-68": {
+    "param": {
+      "Name": "",
+      "Control": "0",
+      "Rate": "10000"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newTriGen-58": {
+    "param": {
+      "Name": "",
+      "F": "10000",
+      "Max": "1",
+      "Min": "0",
+      "Duty": "0.5",
+      "Phase": "0"
+    },
+    "id": 0,
+    "sym": "newTriGen",
+    "classname": "_newTriGen",
+    "name": "三角波发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-69": {
+    "param": {
+      "Name": "",
+      "Control": "1",
+      "Rate": "100"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Vpv1",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Sample1",
+        "cond": "Control==1",
+        "desc": "Pulse",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-70": {
+    "param": {
+      "Name": "",
+      "Control": "1",
+      "Rate": "100"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Sample1",
+        "cond": "Control==1",
+        "desc": "Pulse",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newDelay-31": {
+    "param": {
+      "Name": "",
+      "Td": "0.0025",
+      "Sp": "100",
+      "init_value": "0"
+    },
+    "id": 0,
+    "sym": "newDelay",
+    "classname": "_newDelay",
+    "name": "延时环节",
+    "type": -3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-279": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-280": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "-1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newDivide-75": {
+    "param": {
+      "Name": ""
+    },
+    "id": 0,
+    "sym": "newDivide",
+    "classname": "_newDivide",
+    "name": "除法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "N",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newGain-258": {
+    "param": {
+      "Name": "",
+      "G": "0.001"
+    },
+    "id": 0,
+    "sym": "newGain",
+    "classname": "_newGain",
+    "name": "增益",
+    "type": -3003,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSelector-107": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "Threshold": "0.5"
+    },
+    "id": 0,
+    "sym": "newSelector",
+    "classname": "_newSelector",
+    "name": "选择器",
+    "type": -3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "StartMPPT1",
+        "cond": "true",
+        "desc": "Ctrl",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-336": {
+    "param": {
+      "Name": "",
+      "Value": "0"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSum-281": {
+    "param": {
+      "Name": "",
+      "A": "0",
+      "B": "0",
+      "C": "0",
+      "D": "1",
+      "E": "0",
+      "F": "1",
+      "G": "0"
+    },
+    "id": 0,
+    "sym": "newSum",
+    "classname": "_newSum",
+    "name": "加法器/减法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "3": {
+        "node": -1,
+        "label": "",
+        "cond": "(D!=0)",
+        "desc": "D",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "5": {
+        "node": -1,
+        "label": "",
+        "cond": "(F!=0)",
+        "desc": "F",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "7": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSelector-108": {
+    "param": {
+      "Name": "",
+      "Expression": "0",
+      "Threshold": "0.5"
+    },
+    "id": 0,
+    "sym": "newSelector",
+    "classname": "_newSelector",
+    "name": "选择器",
+    "type": -3006,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "A",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "B",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "StartMPPT1",
+        "cond": "true",
+        "desc": "Ctrl",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "3": {
+        "node": -1,
+        "label": "Vpv1_ref",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newConstant-337": {
+    "param": {
+      "Name": "",
+      "Value": "0.23"
+    },
+    "classname": "_newConstant",
+    "name": "常量输入",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newConstant",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newDelay-32": {
+    "param": {
+      "Name": "",
+      "Td": "0.0025",
+      "Sp": "100",
+      "init_value": "0"
+    },
+    "id": 0,
+    "sym": "newDelay",
+    "classname": "_newDelay",
+    "name": "延时环节",
+    "type": -3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newStepGen-45": {
+    "param": {
+      "Name": "",
+      "V0": "0",
+      "V1": "1",
+      "Time": "0.2"
+    },
+    "id": 0,
+    "sym": "newStepGen",
+    "classname": "_newStepGen",
+    "name": "阶跃发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "StartMPPT1",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newMultiply-118": {
+    "param": {
+      "Name": ""
+    },
+    "id": 0,
+    "sym": "newMultiply",
+    "classname": "_newMultiply",
+    "name": "乘法器",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Ipv1",
+        "cond": "true",
+        "desc": "Input 1",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "#Main.#Vpv1",
+        "cond": "true",
+        "desc": "Input 2",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSgn-4": {
+    "param": {
+      "Name": ""
+    },
+    "classname": "_newSgn",
+    "name": "符号函数",
+    "type": -3002,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newSgn",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newSample-71": {
+    "param": {
+      "Name": "",
+      "Control": "1",
+      "Rate": "100"
+    },
+    "classname": "_newSample",
+    "name": "采样",
+    "type": -3005,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "Sample1",
+        "cond": "Control==1",
+        "desc": "Pulse",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "2": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 5,
+    "id": 0,
+    "sym": "newSample",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newLimiter-130": {
+    "param": {
+      "Name": "",
+      "Limtype": "0",
+      "UL": "0.005",
+      "LL": "-0.005",
+      "DUL": "",
+      "DLL": ""
+    },
+    "classname": "_newLimiter",
+    "name": "限幅器",
+    "type": -3004,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newLimiter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newLoopNode-17": {
+    "param": {
+      "Name": "",
+      "Init": "0"
+    },
+    "classname": "_newLoopNode",
+    "name": "代数环解环点",
+    "type": -3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 2,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 3,
+    "id": 0,
+    "sym": "newLoopNode",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newPulseGen-17": {
+    "param": {
+      "Name": "",
+      "F": "100",
+      "Height": "1",
+      "T0": "0"
+    },
+    "id": 0,
+    "sym": "newPulseGen",
+    "classname": "_newPulseGen",
+    "name": "脉冲发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "Sample1",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newChannel-235": {
+    "param": {
+      "Name": "Vdc",
+      "Freq": "20000",
+      "Dim": "1"
+    },
+    "id": 0,
+    "sym": "newChannel",
+    "classname": "_newChannel",
+    "name": "波形通道",
+    "type": -555,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Vdc",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "Dim",
+        "dimy": "1",
+        "id": 0
+      }
+    },
+    "note": null,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newChannel-237": {
+    "param": {
+      "Name": "Ia",
+      "Freq": "50000",
+      "Dim": "1"
+    },
+    "id": 0,
+    "sym": "newChannel",
+    "classname": "_newChannel",
+    "name": "波形通道",
+    "type": -555,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Ia",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "Dim",
+        "dimy": "1",
+        "id": 0
+      }
+    },
+    "note": null,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newChannel-238": {
+    "param": {
+      "Name": "Ibat_out",
+      "Freq": "1000",
+      "Dim": "1"
+    },
+    "id": 0,
+    "sym": "newChannel",
+    "classname": "_newChannel",
+    "name": "波形通道",
+    "type": -555,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "Pbat",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "Dim",
+        "dimy": "1",
+        "id": 0
+      }
+    },
+    "note": null,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newChannel-239": {
+    "param": {
+      "Name": "Vpv1",
+      "Freq": "1000",
+      "Dim": "1"
+    },
+    "id": 0,
+    "sym": "newChannel",
+    "classname": "_newChannel",
+    "name": "波形通道",
+    "type": -555,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Vpv1",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "Dim",
+        "dimy": "1",
+        "id": 0
+      }
+    },
+    "note": null,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newChannel-240": {
+    "param": {
+      "Name": "Vpv2",
+      "Freq": "1000",
+      "Dim": "1"
+    },
+    "id": 0,
+    "sym": "newChannel",
+    "classname": "_newChannel",
+    "name": "波形通道",
+    "type": -555,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Vpv2",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "Dim",
+        "dimy": "1",
+        "id": 0
+      }
+    },
+    "note": null,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newChannel-241": {
+    "param": {
+      "Name": "Va1",
+      "Freq": "1000",
+      "Dim": "3"
+    },
+    "id": 0,
+    "sym": "newChannel",
+    "classname": "_newChannel",
+    "name": "波形通道",
+    "type": -555,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "#Main.#Iabc",
+        "cond": "true",
+        "desc": "Input",
+        "dimx": "Dim",
+        "dimy": "1",
+        "id": 0
+      }
+    },
+    "note": null,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newStepGen-46": {
+    "param": {
+      "Name": "",
+      "V0": "-80e-3",
+      "V1": "-40e-3",
+      "Time": "0.5"
+    },
+    "id": 0,
+    "sym": "newStepGen",
+    "classname": "_newStepGen",
+    "name": "阶跃发生器",
+    "type": -3008,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Output",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 3,
+        "datatype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 2,
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newCurrentMeter-208": {
+    "param": {
+      "Dim": "3",
+      "I": "#Main.#Iabc"
+    },
+    "classname": "_NewCurrentMeter",
+    "name": "电流表",
+    "type": 3000,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 6,
+    "id": 0,
+    "sym": "newCurrentMeter",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newFaultResistance_1p-44": {
+    "param": {
+      "Name": "",
+      "Init": "2",
+      "fs": "0.7",
+      "fe": "1",
+      "chg": "4",
+      "fct": "1",
+      "I": "",
+      "V": ""
+    },
+    "classname": "_newFaultResistor",
+    "name": "单相故障电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newFaultResistance_1p",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newFaultResistance_1p-45": {
+    "param": {
+      "Name": "",
+      "Init": "2",
+      "fs": "0.7",
+      "fe": "1",
+      "chg": "4",
+      "fct": "1",
+      "I": "",
+      "V": ""
+    },
+    "classname": "_newFaultResistor",
+    "name": "单相故障电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newFaultResistance_1p",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newFaultResistance_1p-46": {
+    "param": {
+      "Name": "",
+      "Init": "2",
+      "fs": "0.7",
+      "fe": "1",
+      "chg": "4",
+      "fct": "1",
+      "I": "",
+      "V": ""
+    },
+    "classname": "_newFaultResistor",
+    "name": "单相故障电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 4,
+    "id": 0,
+    "sym": "newFaultResistance_1p",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "newResistor-177": {
+    "param": {
+      "Name": "",
+      "Dim": "0",
+      "R": "0.001",
+      "I": "",
+      "V": ""
+    },
+    "classname": "newResistorRouter",
+    "name": "电阻",
+    "type": 3001,
+    "thutype": "NewPara",
+    "pin": {
+      "0": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin +",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      },
+      "1": {
+        "node": -1,
+        "label": "",
+        "cond": "true",
+        "desc": "Pin -",
+        "dimx": "Dim*2+1",
+        "dimy": "1",
+        "conntype": 1,
+        "id": 0
+      }
+    },
+    "note": null,
+    "ver": 8,
+    "id": 0,
+    "sym": "newResistor",
+    "is_init": 0,
+    "layer": "defaultApp",
+    "layerName": "subSystem_0"
+  },
+  "START": {
+    "name": "START",
+    "thutype": "timing",
+    "sym": "START",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": ""
+      }
+    },
+    "param": [],
+    "_mid": -1,
+    "ctrlable": 0,
+    "Type": "START",
+    "layer": "TimeLine"
+  },
+  "END": {
+    "name": "END",
+    "thutype": "timing",
+    "sym": "END",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": ""
+      }
+    },
+    "param": [],
+    "_mid": -1,
+    "ctrlable": 0,
+    "Type": "END",
+    "layer": "TimeLine"
+  },
+  "defaultApp": {
+    "name": "defaultApp",
+    "thutype": "timing",
+    "sym": "defaultApp",
+    "pin": {
+      "0": {
+        "node": -1,
+        "id": 0,
+        "label": ""
+      },
+      "1": {
+        "node": -1,
+        "id": 0,
+        "label": ""
+      }
+    },
+    "param": [
+      {
+        "Application Name": "defaultApp",
+        "Type": "EMTP",
+        "deltaT": "0.000001",
+        "firstSimTime": ""
+      }
+    ],
+    "_mid": -1,
+    "ctrlable": 0,
+    "Type": "EMTP",
+    "globalParam": {
+      "$StartMPPT2_time": "0.3",
+      "$StartMPPT1_time": "0.2",
+      "$PrefChange_time": "0.5",
+      "$LoadChange_time": "0.7",
+      "$initial_type": "0",
+      "$ramping_time": "0",
+      "$max_initial_time": "0",
+      "$save_snapshot": "0",
+      "$save_snapshot_time": "0",
+      "$snapshot_number": "0",
+      "$load_snapshot": "0",
+      "$load_snapshot_time": "0"
+    },
+    "layer": "TimeLine"
+  }
+}
+pssMsr: {}
+pssCtrl: {}
+pssNodeCtrl: [
+  []
+]
+pssMod: {}
+pssModName: []
+systemSymbol: {}
+child: []
+modeid: {}
+ioelenode: {}
+ConnectionPoint: {
+  "defaultApp": [
+    [
+      "HalfBridgeModule-1.2",
+      "newPVSource-10.1",
+      "newCapacitorRouterWithInitValue-3.2",
+      "NSSTsModule-1.2",
+      "newBranchVoltageMeter-49.2",
+      "NSSTsModule-1.4",
+      "HalfBridgeModule-5.2",
+      "newPVSource-11.1",
+      "newCapacitorRouterWithInitValue-9.2",
+      "ThreePhaseHBridgeModule-1.3",
+      "newStorageBattery-10.1",
+      "HalfBridgeModule-2.2",
+      "newCapacitorRouterWithInitValue-4.2"
+    ],
+    [
+      "ThreePhaseHBridgeModule-1.4",
+      "ChannelMerge-67.7"
+    ],
+    [
+      "ThreePhaseHBridgeModule-1.5",
+      "newConstant-304.1",
+      "HalfBridgeModule-1.5",
+      "HalfBridgeModule-2.5",
+      "NSSTsModule-1.6",
+      "HalfBridgeModule-5.5"
+    ],
+    [
+      "newParkTransform-54.1",
+      "newPLL-12.4",
+      "newParkTransform-55.1",
+      "newParkTransform-56.1"
+    ],
+    [
+      "newParkTransform-54.10",
+      "newSum-252.6"
+    ],
+    [
+      "newParkTransform-54.11",
+      "newSum-253.6"
+    ],
+    [
+      "newTriGen-53.1",
+      "newComparator-186.2",
+      "newComparator-187.2",
+      "newComparator-188.2"
+    ],
+    [
+      "HalfBridgeModule-1.4",
+      "ChannelMerge-71.3"
+    ],
+    [
+      "ChannelMerge-68.3",
+      "HalfBridgeModule-5.4"
+    ],
+    [
+      "newSum-255.4",
+      "newSelector-102.4",
+      "newSum-261.6",
+      "newLoopNode-15.1"
+    ],
+    [
+      "newSum-255.6",
+      "newSample-50.1",
+      "newMultiply-115.2",
+      "newChannel-240.1"
+    ],
+    [
+      "newSample-50.2",
+      "newSample-51.2",
+      "newSample-59.2",
+      "newPulseGen-15.1"
+    ],
+    [
+      "newSelector-101.3",
+      "newSelector-102.3",
+      "newStepGen-42.1"
+    ],
+    [
+      "HalfBridgeModule-2.4",
+      "ChannelMerge-69.3"
+    ],
+    [
+      "newRealPole-2.1",
+      "newMultiply-117.1"
+    ],
+    [
+      "newRealPole-3.2",
+      "newChannel-238.1",
+      "newSum-267.6"
+    ],
+    [
+      "newParkTransform-56.10",
+      "newSum-268.6"
+    ],
+    [
+      "newParkTransform-56.11",
+      "newSum-269.6"
+    ],
+    [
+      "NSSTsModule-1.5",
+      "FirePulseGenSST-1.5"
+    ],
+    [
+      "FirePulseGenSST-1.4",
+      "newSample-66.3"
+    ],
+    [
+      "newSum-273.6",
+      "newChannel-237.1"
+    ],
+    [
+      "newSum-275.6",
+      "newSum-276.4",
+      "newChannel-235.1"
+    ],
+    [
+      "newSum-278.4",
+      "newSelector-108.4",
+      "newSum-281.6",
+      "newLoopNode-17.1"
+    ],
+    [
+      "newSum-278.6",
+      "newSample-69.1",
+      "newMultiply-118.2",
+      "newChannel-239.1"
+    ],
+    [
+      "newSample-69.2",
+      "newSample-70.2",
+      "newSample-71.2",
+      "newPulseGen-17.1"
+    ],
+    [
+      "newSelector-107.3",
+      "newSelector-108.3",
+      "newStepGen-45.1"
+    ],
+    [
+      "newLineCluster-29.2",
+      "newInductor-142.1"
+    ],
+    [
+      "newLineCluster-29.3",
+      "newInductor-143.1"
+    ],
+    [
+      "newLineCluster-29.4",
+      "newInductor-144.1"
+    ],
+    [
+      "newCurrentMeter-196.1",
+      "newInductor-142.2",
+      "newCapacitorRouterWithInitValue-6.1"
+    ],
+    [
+      "newCurrentMeter-197.1",
+      "newInductor-143.2",
+      "newCapacitorRouterWithInitValue-7.1"
+    ],
+    [
+      "newCurrentMeter-198.1",
+      "newInductor-144.2",
+      "newCapacitorRouterWithInitValue-8.1"
+    ],
+    [
+      "newSinGen-3.2",
+      "newPLL-12.1"
+    ],
+    [
+      "newSinGen-3.3",
+      "newPLL-12.2"
+    ],
+    [
+      "newSinGen-3.4",
+      "newPLL-12.3"
+    ],
+    [
+      "newParkTransform-55.4",
+      "newComparator-186.1"
+    ],
+    [
+      "newComparator-187.1",
+      "newParkTransform-55.5"
+    ],
+    [
+      "newParkTransform-55.6",
+      "newComparator-188.1"
+    ],
+    [
+      "ChannelMerge-67.1",
+      "newComparator-186.3"
+    ],
+    [
+      "newComparator-186.4",
+      "ChannelMerge-67.2"
+    ],
+    [
+      "newComparator-187.3",
+      "ChannelMerge-67.3"
+    ],
+    [
+      "newComparator-187.4",
+      "ChannelMerge-67.4"
+    ],
+    [
+      "newComparator-188.3",
+      "ChannelMerge-67.5"
+    ],
+    [
+      "newComparator-188.4",
+      "ChannelMerge-67.6"
+    ],
+    [
+      "newSum-252.8",
+      "newPICtrl-79.1"
+    ],
+    [
+      "newPICtrl-79.2",
+      "newParkTransform-55.2"
+    ],
+    [
+      "newSum-253.8",
+      "newPICtrl-80.1"
+    ],
+    [
+      "newPICtrl-80.2",
+      "newParkTransform-55.3"
+    ],
+    [
+      "HalfBridgeModule-1.1",
+      "newInductor-146.1"
+    ],
+    [
+      "newConstant-309.1",
+      "ChannelMerge-68.1"
+    ],
+    [
+      "newComparator-190.4",
+      "NC-4.1"
+    ],
+    [
+      "newGain-246.1",
+      "newSum-255.8"
+    ],
+    [
+      "newGain-246.2",
+      "newPICtrl-82.1"
+    ],
+    [
+      "newPICtrl-82.2",
+      "newSample-47.1"
+    ],
+    [
+      "newComparator-190.1",
+      "newSample-47.3"
+    ],
+    [
+      "newTriGen-55.1",
+      "newComparator-190.2"
+    ],
+    [
+      "ChannelMerge-68.2",
+      "newComparator-190.3"
+    ],
+    [
+      "newPVSource-10.3",
+      "newConstant-311.1"
+    ],
+    [
+      "newConstant-312.1",
+      "newPVSource-10.4"
+    ],
+    [
+      "newResistor-168.2",
+      "newCapacitorRouterWithInitValue-3.1"
+    ],
+    [
+      "newCurrentMeter-199.1",
+      "HalfBridgeModule-1.3"
+    ],
+    [
+      "newCurrentMeter-200.1",
+      "newPVSource-10.2"
+    ],
+    [
+      "newInductor-146.2",
+      "newCurrentMeter-200.2",
+      "newVoltageMeter-187.1",
+      "newResistor-168.1"
+    ],
+    [
+      "newSum-259.8",
+      "newDivide-72.1"
+    ],
+    [
+      "newSum-260.8",
+      "newDivide-72.2"
+    ],
+    [
+      "newConstant-315.1",
+      "newSelector-101.2"
+    ],
+    [
+      "newSelector-101.4",
+      "newSum-261.4"
+    ],
+    [
+      "newConstant-316.1",
+      "newSelector-102.2"
+    ],
+    [
+      "newDivide-72.3",
+      "newSgn-3.1"
+    ],
+    [
+      "newGain-248.1",
+      "newSgn-3.2"
+    ],
+    [
+      "newSample-50.3",
+      "newSum-259.4",
+      "newDelay-24.1"
+    ],
+    [
+      "newSample-51.3",
+      "newSum-260.4",
+      "newDelay-25.1"
+    ],
+    [
+      "newMultiply-115.3",
+      "newSample-51.1"
+    ],
+    [
+      "newSum-261.8",
+      "newSample-59.1"
+    ],
+    [
+      "newSample-59.3",
+      "newSelector-102.1"
+    ],
+    [
+      "newDelay-24.2",
+      "newSum-259.6"
+    ],
+    [
+      "newDelay-25.2",
+      "newSum-260.6"
+    ],
+    [
+      "newGain-248.2",
+      "newLimiter-128.1"
+    ],
+    [
+      "newLimiter-128.2",
+      "newSelector-101.1"
+    ],
+    [
+      "newGain-250.1",
+      "newSum-265.8"
+    ],
+    [
+      "newGain-250.2",
+      "newPICtrl-83.1"
+    ],
+    [
+      "newPICtrl-83.2",
+      "newSample-61.1"
+    ],
+    [
+      "newComparator-191.1",
+      "newSample-61.3"
+    ],
+    [
+      "newTriGen-56.1",
+      "newComparator-191.2"
+    ],
+    [
+      "newComparator-191.3",
+      "ChannelMerge-69.1"
+    ],
+    [
+      "newComparator-191.4",
+      "ChannelMerge-69.2"
+    ],
+    [
+      "newRealPole-2.2",
+      "newSum-265.6"
+    ],
+    [
+      "newMultiply-117.3",
+      "newRealPole-3.1"
+    ],
+    [
+      "newPICtrl-85.2",
+      "newSum-265.4"
+    ],
+    [
+      "newSum-267.8",
+      "newPICtrl-85.1"
+    ],
+    [
+      "newConstant-325.1",
+      "newSum-268.4"
+    ],
+    [
+      "newConstant-326.1",
+      "newSum-269.4"
+    ],
+    [
+      "newSum-268.8",
+      "newPICtrl-86.1"
+    ],
+    [
+      "newSum-269.8",
+      "newPICtrl-87.1"
+    ],
+    [
+      "newPICtrl-86.2",
+      "newSum-252.4"
+    ],
+    [
+      "newPICtrl-87.2",
+      "newSum-253.4"
+    ],
+    [
+      "newCurrentMeter-205.1",
+      "NSSTsModule-1.1",
+      "newBranchVoltageMeter-49.1"
+    ],
+    [
+      "newCurrentMeter-205.2",
+      "newInductor-149.2"
+    ],
+    [
+      "newConstant-330.1",
+      "newAFPMGen-5.2"
+    ],
+    [
+      "newConstant-331.1",
+      "newAFPMGen-5.3"
+    ],
+    [
+      "newAFPMGen-5.4",
+      "newSum-273.4"
+    ],
+    [
+      "newGain-253.2",
+      "newSum-274.4"
+    ],
+    [
+      "newSum-273.8",
+      "newGain-253.1",
+      "newGain-254.1"
+    ],
+    [
+      "newGain-254.2",
+      "newComplexPole-7.1"
+    ],
+    [
+      "newComplexPole-7.2",
+      "newSum-274.6"
+    ],
+    [
+      "newSum-274.8",
+      "newSample-66.1"
+    ],
+    [
+      "newGain-255.2",
+      "newSum-275.4"
+    ],
+    [
+      "newSum-275.8",
+      "newPICtrl-88.1"
+    ],
+    [
+      "newSum-276.8",
+      "newPICtrl-89.1"
+    ],
+    [
+      "newConstant-332.1",
+      "newSum-276.6"
+    ],
+    [
+      "newPICtrl-88.2",
+      "newSample-67.1"
+    ],
+    [
+      "newSample-67.3",
+      "FirePulseGenSST-1.2"
+    ],
+    [
+      "newACVoltageSource_1p-20.2",
+      "newInductor-149.1"
+    ],
+    [
+      "newGain-256.2",
+      "newSum-277.4"
+    ],
+    [
+      "newComplexPole-8.2",
+      "newSum-277.6"
+    ],
+    [
+      "newSum-277.8",
+      "newRealPole-4.1"
+    ],
+    [
+      "newRealPole-4.2",
+      "newAFPMGen-5.1"
+    ],
+    [
+      "newPICtrl-89.2",
+      "newGain-256.1",
+      "newComplexPole-8.1"
+    ],
+    [
+      "ChannelDeMerge-1.2",
+      "newGain-255.1"
+    ],
+    [
+      "newResistor-172.2",
+      "newCurrentMeter-199.2",
+      "newResistor-174.1"
+    ],
+    [
+      "HalfBridgeModule-5.1",
+      "newInductor-150.1"
+    ],
+    [
+      "newPVSource-11.3",
+      "newConstant-333.1"
+    ],
+    [
+      "newConstant-334.1",
+      "newPVSource-11.4"
+    ],
+    [
+      "newResistor-173.2",
+      "newCapacitorRouterWithInitValue-9.1"
+    ],
+    [
+      "newCurrentMeter-206.1",
+      "HalfBridgeModule-5.3"
+    ],
+    [
+      "newCurrentMeter-207.1",
+      "newPVSource-11.2"
+    ],
+    [
+      "newInductor-150.2",
+      "newCurrentMeter-207.2",
+      "newVoltageMeter-193.1",
+      "newResistor-173.1"
+    ],
+    [
+      "newResistor-174.2",
+      "newCurrentMeter-206.2",
+      "newResistor-175.1"
+    ],
+    [
+      "newResistor-175.2",
+      "ThreePhaseHBridgeModule-1.2",
+      "newResistor-171.2"
+    ],
+    [
+      "newConstant-335.1",
+      "ChannelMerge-71.1"
+    ],
+    [
+      "newComparator-193.4",
+      "NC-6.1"
+    ],
+    [
+      "newGain-257.1",
+      "newSum-278.8"
+    ],
+    [
+      "newGain-257.2",
+      "newPICtrl-90.1"
+    ],
+    [
+      "newPICtrl-90.2",
+      "newSample-68.1"
+    ],
+    [
+      "newComparator-193.1",
+      "newSample-68.3"
+    ],
+    [
+      "newTriGen-58.1",
+      "newComparator-193.2"
+    ],
+    [
+      "ChannelMerge-71.2",
+      "newComparator-193.3"
+    ],
+    [
+      "newSum-279.8",
+      "newDivide-75.1"
+    ],
+    [
+      "newSum-280.8",
+      "newDivide-75.2"
+    ],
+    [
+      "newConstant-336.1",
+      "newSelector-107.2"
+    ],
+    [
+      "newSelector-107.4",
+      "newSum-281.4"
+    ],
+    [
+      "newConstant-337.1",
+      "newSelector-108.2"
+    ],
+    [
+      "newDivide-75.3",
+      "newSgn-4.1"
+    ],
+    [
+      "newGain-258.1",
+      "newSgn-4.2"
+    ],
+    [
+      "newSample-69.3",
+      "newSum-279.4",
+      "newDelay-31.1"
+    ],
+    [
+      "newSample-70.3",
+      "newSum-280.4",
+      "newDelay-32.1"
+    ],
+    [
+      "newMultiply-118.3",
+      "newSample-70.1"
+    ],
+    [
+      "newSum-281.8",
+      "newSample-71.1"
+    ],
+    [
+      "newSample-71.3",
+      "newSelector-108.1"
+    ],
+    [
+      "newDelay-31.2",
+      "newSum-279.6"
+    ],
+    [
+      "newDelay-32.2",
+      "newSum-280.6"
+    ],
+    [
+      "newGain-258.2",
+      "newLimiter-130.1"
+    ],
+    [
+      "newLimiter-130.2",
+      "newSelector-107.1"
+    ],
+    [
+      "newStepGen-46.1",
+      "newSum-267.4"
+    ],
+    [
+      "ThreePhaseHBridgeModule-1.1",
+      "newCurrentMeter-208.1"
+    ],
+    [
+      "newCurrentMeter-208.2",
+      "newLineCluster-29.1"
+    ],
+    [
+      "newCurrentMeter-196.2",
+      "newFaultResistance_1p-44.1",
+      "newBranchVoltageMeter-46.1"
+    ],
+    [
+      "newCurrentMeter-197.2",
+      "newFaultResistance_1p-45.1",
+      "newBranchVoltageMeter-47.1"
+    ],
+    [
+      "newCurrentMeter-198.2",
+      "newFaultResistance_1p-46.1",
+      "newBranchVoltageMeter-48.1"
+    ],
+    [
+      "newCapacitorRouterWithInitValue-6.2",
+      "newFaultResistance_1p-44.2",
+      "newBranchVoltageMeter-46.2",
+      "newFaultResistance_1p-45.2",
+      "newBranchVoltageMeter-47.2",
+      "newFaultResistance_1p-46.2",
+      "newBranchVoltageMeter-48.2",
+      "newCapacitorRouterWithInitValue-7.2",
+      "newCapacitorRouterWithInitValue-8.2"
+    ],
+    [
+      "newCurrentMeter-204.1",
+      "newStorageBattery-10.2"
+    ],
+    [
+      "newCurrentMeter-204.2",
+      "HalfBridgeModule-2.3",
+      "newVoltageMeter-189.1"
+    ],
+    [
+      "HalfBridgeModule-2.1",
+      "newInductor-147.1"
+    ],
+    [
+      "newInductor-147.2",
+      "newCapacitorRouterWithInitValue-4.1",
+      "newCurrentMeter-203.1"
+    ],
+    [
+      "newCurrentMeter-203.2",
+      "newResistor-171.1",
+      "newVoltageMeter-191.1",
+      "newResistor-177.2"
+    ],
+    [
+      "NSSTsModule-1.3",
+      "newResistor-172.1",
+      "newVoltageMeter-192.1",
+      "newResistor-177.1"
+    ]
+  ],
+  "TimeLine": [
+    [],
+    [
+      "START.1",
+      "defaultApp.1"
+    ],
+    [
+      "END.1",
+      "defaultApp.2"
+    ]
+  ]
+}
+paramList: {
+  "$StartMPPT2_time": [
+    "defaultApp newStepGen-42 undefined"
+  ],
+  "$StartMPPT1_time": [
+    "defaultApp newStepGen-45 undefined"
+  ],
+  "$PrefChange_time": [
+    "defaultApp newStepGen-46 undefined"
+  ],
+  "$LoadChange_time": [
+    "defaultApp newFaultResistance_1p-44 undefined",
+    "defaultApp newFaultResistance_1p-45 undefined",
+    "defaultApp newFaultResistance_1p-46 undefined"
+  ]
+}
+moduleFloor: {}
+moreSimuEle: {}
+dspgrp: [
+  [
+    {
+      "comp": "newChannel-235",
+      "name": "Vdc",
+      "Dim": 1
+    }
+  ],
+  [
+    {
+      "comp": "newChannel-237",
+      "name": "Ia",
+      "Dim": 1
+    }
+  ],
+  [
+    {
+      "comp": "newChannel-238",
+      "name": "Ibat_out",
+      "Dim": 1
+    }
+  ],
+  [
+    {
+      "comp": "newChannel-239",
+      "name": "Vpv1",
+      "Dim": 1
+    }
+  ],
+  [
+    {
+      "comp": "newChannel-240",
+      "name": "Vpv2",
+      "Dim": 1
+    }
+  ],
+  [
+    {
+      "comp": "newChannel-241",
+      "name": "Va1",
+      "Dim": "3"
+    }
+  ]
+]
+meters: {}
+simuId: 0
+taskId: 
+snapshot: {}

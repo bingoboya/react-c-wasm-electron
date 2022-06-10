@@ -15,12 +15,12 @@ let cmdStrClient = 'start ./PIPClient.exe'
 // TODO 关闭electron时，关闭子进程
 function runExec() {
   // 使用 spawn 运行 ./PIPServe.exe，spawn运行的子进程会在主进程关闭时一起关闭
-  // child_process.spawn('./PIPServe.exe', [], {
-    // windowsHide: false // 隐藏子进程的窗口
-  // })
+  child_process.spawn('./PIPServe.exe', [], {
+    windowsHide: false // 隐藏子进程的窗口
+  })
   // 使用 exec 运行 ./PIPServe.exe， exec 运行的子进程不会在主进程关闭时一起关闭
-  child_process.exec(cmdStrServer, {})
-  child_process.exec(cmdStrClient, {})
+  // child_process.exec(cmdStrServer, {})
+  // child_process.exec(cmdStrClient, {})
 }
 // runExec() // 调用子进程
 const connectserver = () => { // node通过创建命名管道与 c 或者 julia 的 .exe文件通信
